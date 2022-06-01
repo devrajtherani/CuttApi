@@ -8,7 +8,7 @@ setup(
   author = 'Devraj Therani',                   # Type in your name
   author_email = 'ttctlc96e@mozmail.com',      # Type in your E-Mail
   url = 'https://github.com/devrajtherani/CuttApi',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/devrajtherani/CuttApi/archive/refs/tags/v_0.1.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/devrajtherani/CuttApi/archive/refs/tags/v_0.2.tar.gz',    # I explain this later on
   keywords = ['API', 'SIMPLE', ''],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'requests',
