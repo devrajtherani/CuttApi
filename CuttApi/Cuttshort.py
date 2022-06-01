@@ -15,7 +15,7 @@ class Cuttshort:
                 #api_key = input("Enter your Cuttly api key: ")
                 api_url = 'http://cutt.ly/api/api.php?key={}'.format(api_key)
                 data = requests.get(api_url).json()
-                #print(data["auth"])
+                print(data["auth"])
                 if data["auth"]==True:
                     while True:
                         try:
@@ -28,7 +28,7 @@ class Cuttshort:
                             if link.startswith("http"):
                                 response = requests.get(link)
                                 status = response.status_code
-                                #print(status)
+                                print(status)
                                 url_parts = list(urlparse.urlparse(link))
                                 query = dict(urlparse.parse_qsl(url_parts[4]))
                                 query.update(params)
@@ -42,7 +42,7 @@ class Cuttshort:
                                         name = input("Would you like to give a name? : ")
                                         if name=="Yes" or name=="yes":
                                             while True:
-                                                name1 = input("Enter name: ")
+                                                name1 = input("Enter name:")
                                                 api_url1 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(api_key, url, name1)
                                                 data1 = requests.get(api_url1).json()["url"]
                                                 #print(data1)
@@ -84,7 +84,7 @@ class Cuttshort:
                                         name3 = input("Would you like to give a name? : ")
                                         if name3=="Yes" or name3=="yes":
                                             while True:
-                                                name2 = input("Enter name: ")
+                                                name2 = input("Enter name:")
                                                 api_url3 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(api_key, url3, name2)
                                                 data3 = requests.get(api_url3).json()["url"]
                                                 if data3["status"] == 7:
