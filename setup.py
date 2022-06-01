@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 setup(
   name = 'CuttApi',         # How you named your package folder (MyLib)
   packages = ['CuttApi'],   # Chose the same as "name"
