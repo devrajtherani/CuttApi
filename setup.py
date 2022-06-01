@@ -2,7 +2,7 @@ from setuptools import setup
 setup(
   name = 'CuttApi',         # How you named your package folder (MyLib)
   packages = ['CuttApi'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
+  version = '0.2',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'One of the best ways of shortening URLs using Cuttly URL shortener just by entering your API key and seeing the rest that is done automatically by the Module',   # Give a short description about your library
   author = 'Devraj Therani',                   # Type in your name
