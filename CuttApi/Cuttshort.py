@@ -15,7 +15,7 @@ class Cuttshort:
                 #api_key = input("Enter your Cuttly api key: ")
                 api_url = 'http://cutt.ly/api/api.php?key={}'.format(api_key)
                 data = requests.get(api_url).json()
-                print(data["auth"])
+                #print(data["auth"])
                 if data["auth"]==True:
                     while True:
                         try:
@@ -28,7 +28,7 @@ class Cuttshort:
                             if link.startswith("http"):
                                 response = requests.get(link)
                                 status = response.status_code
-                                print(status)
+                                #print(status)
                                 url_parts = list(urlparse.urlparse(link))
                                 query = dict(urlparse.parse_qsl(url_parts[4]))
                                 query.update(params)
@@ -71,7 +71,7 @@ class Cuttshort:
                                 link1 = "http://" + link
                                 response1 = requests.get(link1)
                                 status1 = response1.status_code
-                                print(status1)
+                                #print(status1)
                                 url_parts1 = list(urlparse.urlparse(link1))
                                 query1 = dict(urlparse.parse_qsl(url_parts1[4]))
                                 query1.update(params)
