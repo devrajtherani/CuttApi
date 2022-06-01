@@ -28,7 +28,7 @@ pyperclip
 ## Usage
 The only thing users need to do is
 ```sh
-import stdiomask
+import Cuttshort, stdiomask
 api_key = stdiomask.getpass("Enter your Cuttly api key: ")
 short1 = Cuttshort(api_key)
 ```
