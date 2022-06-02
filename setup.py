@@ -2,7 +2,7 @@ from setuptools import setup
 setup(
   name = 'CuttApi',         
   packages = ['CuttApi'],   
-  version = '0.1.0',      
+  version = '0.1',      
   license='MIT',        
   description = 'One of the best ways of shortening URLs using Cuttly URL shortener just by entering your API key and seeing the rest that is done automatically by the Module',   
   author = 'Devraj Therani',                   
