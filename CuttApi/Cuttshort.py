@@ -241,5 +241,5 @@ class Cuttshort:
 
 if __name__ == "__main__":
     import stdiomask
-    api_key200 = stdiomask.getpass("Enter your Cuttly api key: ")
-    short1 = Cuttshort(api_key200)
+    api_key = stdiomask.getpass("Enter your Cuttly api key: ")
+    short1 = Cuttshort(api_key)
