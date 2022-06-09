@@ -149,6 +149,89 @@ class Cuttshort:
                                                                         break
                                                                 else:
                                                                     print("Please enter either Yes/No!")
+                                                        elif status == 301 and not link.startswith("http://www"):
+                                                            link2000 = "http://www." + urllink + "/"
+                                                            print(link2000)
+                                                            response2000 = requests.head(link2000)
+                                                            status2000 = response2000.status_code
+                                                            url_parts2000 = list(urlparse.urlparse(link2000))
+                                                            query2000 = dict(urlparse.parse_qsl(url_parts2000[4]))
+                                                            query2000.update(params)
+     
+                                                            url_parts2000[4] = urlencode(query2000)
+                                                            url2000 = urlparse.urlunparse(url_parts2000)
+                                                            url20000 = urllib.parse.quote(url2000)
+                                                            link2001 = "https://www." + urllink + "/"
+                                                            response2001 = requests.head(link2001)
+                                                            status2001 = response2001.status_code
+                                                            print(status2001)
+                                                            url_parts2001 = list(urlparse.urlparse(link2001))
+                                                            query2001 = dict(urlparse.parse_qsl(url_parts2001[4]))
+                                                            query2001.update(params)
+     
+                                                            url_parts2001[4] = urlencode(query2001)
+                                                            url2001 = urlparse.urlunparse(url_parts2001)
+                                                            url20001 = urllib.parse.quote(url2001)
+                                                            if status2000==200:
+                                                                while True:
+                                                                    name2000 = input("Would you like to give a name? : ")
+                                                                    if name2000.upper()=="YES":
+                                                                        while True:
+                                                                            name20000 = input("Enter name: ")
+                                                                            api_url2000 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url20000, name20000)
+                                                                            data2000 = requests.get(api_url2000).json()["url"]
+                                                                            if data2000["status"] == 7:
+                                                                                shortened_url2000 = data2000["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url2000)
+                                                                                pyperclip.copy(shortened_url2000)
+                                                                                break
+                                                                            elif data2000["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name2000.upper()=="NO":
+                                                                        api_url2001 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url20000)
+                                                                        data2001 = requests.get(api_url2001).json()["url"]
+                                                                        if data2001["status"] == 7:
+                                                                            shortened_url2001 = data2001["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url2001)
+                                                                            pyperclip.copy(shortened_url2001)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            elif status2001==200:
+                                                                while True:
+                                                                    name2002 = input("Would you like to give a name? : ")
+                                                                    if name2002.upper()=="YES":
+                                                                        while True:
+                                                                            name20001 = input("Enter name: ")
+                                                                            api_url2002 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url20001, name20001)
+                                                                            data2002 = requests.get(api_url2002).json()["url"]
+                                                                            if data2002["status"] == 7:
+                                                                                shortened_url2002 = data2002["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url2002)
+                                                                                pyperclip.copy(shortened_url2002)
+                                                                                break
+                                                                            elif data2002["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name2002.upper()=="NO":
+                                                                        api_url2001 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url20001)
+                                                                        data2001 = requests.get(api_url2001).json()["url"]
+                                                                        if data2001["status"] == 7:
+                                                                            shortened_url2001 = data2001["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url2001)
+                                                                            pyperclip.copy(shortened_url2001)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            else:
+                                                                print("The entered URL is already shortened")
                                                         else:
                                                             print("The entered URL is already shortened")
                                                     elif secpro=="https":
@@ -193,6 +276,87 @@ class Cuttshort:
                                                                 else:
                                                                     print("Please enter either Yes/No!")
                                                                     continue
+                                                        elif status == 301 and not link.startswith("http://www"):
+                                                            link20001 = "https://www." + urllink + "/"
+                                                            response20001 = requests.head(link20001)
+                                                            status20001 = response20001.status_code
+                                                            url_parts20001 = list(urlparse.urlparse(link20001))
+                                                            query20001 = dict(urlparse.parse_qsl(url_parts20001[4]))
+                                                            query20001.update(params)
+     
+                                                            url_parts20001[4] = urlencode(query20001)
+                                                            url200001 = urlparse.urlunparse(url_parts20001)
+                                                            url200002 = urllib.parse.quote(url200001)
+                                                            link20011 = "http://www." + urllink + "/"
+                                                            response20011 = requests.head(link20011)
+                                                            status20011 = response20011.status_code
+                                                            url_parts20011 = list(urlparse.urlparse(link20011))
+                                                            query20011 = dict(urlparse.parse_qsl(url_parts20011[4]))
+                                                            query20011.update(params)
+     
+                                                            url_parts20011[4] = urlencode(query20011)
+                                                            url20011 = urlparse.urlunparse(url_parts20011)
+                                                            url200011 = urllib.parse.quote(url20011)
+                                                            if status20001==200:
+                                                                while True:
+                                                                    name200011 = input("Would you like to give a name? : ")
+                                                                    if name200011.upper()=="YES":
+                                                                        while True:
+                                                                            name200001 = input("Enter name: ")
+                                                                            api_url20001 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url200002, name200001)
+                                                                            data20001 = requests.get(api_url20001).json()["url"]
+                                                                            if data20001["status"] == 7:
+                                                                                shortened_url20001 = data20001["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url20001)
+                                                                                pyperclip.copy(shortened_url20001)
+                                                                                break
+                                                                            elif data20001["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name200011.upper()=="NO":
+                                                                        api_url20011 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url200002)
+                                                                        data20011 = requests.get(api_url20011).json()["url"]
+                                                                        if data20011["status"] == 7:
+                                                                            shortened_url20011 = data20011["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url20011)
+                                                                            pyperclip.copy(shortened_url20011)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            elif status20011==200:
+                                                                while True:
+                                                                    name20022 = input("Would you like to give a name? : ")
+                                                                    if name20022.upper()=="YES":
+                                                                        while True:
+                                                                            name200012 = input("Enter name: ")
+                                                                            api_url20022 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url200011, name200012)
+                                                                            data20022 = requests.get(api_url20022).json()["url"]
+                                                                            if data20022["status"] == 7:
+                                                                                shortened_url20022 = data20022["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url20022)
+                                                                                pyperclip.copy(shortened_url20022)
+                                                                                break
+                                                                            elif data20022["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name20022.upper()=="NO":
+                                                                        api_url20012 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url200011)
+                                                                        data20012 = requests.get(api_url20012).json()["url"]
+                                                                        if data20012["status"] == 7:
+                                                                            shortened_url20012 = data20012["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url20012)
+                                                                            pyperclip.copy(shortened_url20012)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            else:
+                                                                print("The entered URL is already shortened")
                                                         else:
                                                             print("The entered URL is already shortened")
                                     elif secpro=="http":
@@ -278,8 +442,88 @@ class Cuttshort:
                                                                 break
                                                         else:
                                                             print("Please enter either Yes/No!")
-                                                else:
-                                                    print("The entered URL is already shortened")
+                                            elif not link.startswith("http://www"):
+                                                            link200011 = "http://www." + urllink
+                                                            response200011 = requests.head(link200011)
+                                                            status200011 = response200011.status_code
+                                                            url_parts200011 = list(urlparse.urlparse(link200011))
+                                                            query200011 = dict(urlparse.parse_qsl(url_parts200011[4]))
+                                                            query200011.update(params)
+     
+                                                            url_parts200011[4] = urlencode(query200011)
+                                                            url200011 = urlparse.urlunparse(url_parts200011)
+                                                            url2000011 = urllib.parse.quote(url200011)
+                                                            link200111 = "https://www." + urllink
+                                                            response200111 = requests.head(link200111)
+                                                            status200111 = response200111.status_code
+                                                            print(status200111)
+                                                            url_parts200111 = list(urlparse.urlparse(link200111))
+                                                            query200111 = dict(urlparse.parse_qsl(url_parts200111[4]))
+                                                            query200111.update(params)
+     
+                                                            url_parts200111[4] = urlencode(query200111)
+                                                            url200111 = urlparse.urlunparse(url_parts200111)
+                                                            url2000111 = urllib.parse.quote(url200111)
+                                                            if status200011==200:
+                                                                while True:
+                                                                    name2000111 = input("Would you like to give a name? : ")
+                                                                    if name2000111.upper()=="YES":
+                                                                        while True:
+                                                                            name20000111 = input("Enter name: ")
+                                                                            api_url2000111 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url2000011, name20000111)
+                                                                            data2000111 = requests.get(api_url2000111).json()["url"]
+                                                                            if data2000111["status"] == 7:
+                                                                                shortened_url2000111 = data2000111["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url2000111)
+                                                                                pyperclip.copy(shortened_url2000111)
+                                                                                break
+                                                                            elif data2000111["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name2000111.upper()=="NO":
+                                                                        api_url2001111 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url2000011)
+                                                                        data2001111 = requests.get(api_url2001111).json()["url"]
+                                                                        if data2001111["status"] == 7:
+                                                                            shortened_url2001111 = data2001111["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url2001111)
+                                                                            pyperclip.copy(shortened_url2001111)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            elif status200111==200:
+                                                                while True:
+                                                                    name200211 = input("Would you like to give a name? : ")
+                                                                    if name200211.upper()=="YES":
+                                                                        while True:
+                                                                            name20001111 = input("Enter name: ")
+                                                                            api_url2002111 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url2000111, name20001111)
+                                                                            data2002111 = requests.get(api_url2002111).json()["url"]
+                                                                            if data2002111["status"] == 7:
+                                                                                shortened_url2002111 = data2002111["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url2002111)
+                                                                                pyperclip.copy(shortened_url2002111)
+                                                                                break
+                                                                            elif data2002111["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name200211.upper()=="NO":
+                                                                        api_url2001112 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url2000111)
+                                                                        data2001112 = requests.get(api_url2001112).json()["url"]
+                                                                        if data2001112["status"] == 7:
+                                                                            shortened_url2001112 = data2001112["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url2001112)
+                                                                            pyperclip.copy(shortened_url2001112)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            else:
+                                                                print("The entered URL is already shortened")
                                             else:
                                                 print("The entered URL is already shortened")
                                     elif secpro=="https":
@@ -323,6 +567,129 @@ class Cuttshort:
                                                         break
                                                 else:
                                                     print("Please enter either Yes/No!")
+                                        elif status3==301:
+                                            if not link.endswith("/"):
+                                                link7 = "https://" + urllink + "/"
+                                                response5 = requests.head(link7)
+                                                status5 = response5.status_code
+                                                url_parts5 = list(urlparse.urlparse(link7))
+                                                query5 = dict(urlparse.parse_qsl(url_parts5[4]))
+                                                query5.update(params)
+     
+                                                url_parts5[4] = urlencode(query5)
+                                                url10 = urlparse.urlunparse(url_parts5)
+                                                url11 = urllib.parse.quote(url10)
+
+                                                if status5==200:
+                                                    while True:
+                                                        name10 = input("Would you like to give a name? : ")
+                                                        if name10.upper()=="YES":
+                                                            while True:
+                                                                name11 = input("Enter name: ")
+                                                                api_url11 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url11, name11)
+                                                                data11 = requests.get(api_url11).json()["url"]
+                                                                if data11["status"] == 7:
+                                                                    shortened_url11 = data11["shortLink"]
+                                                                    print("Shortened URL: ", shortened_url11)
+                                                                    pyperclip.copy(shortened_url11)
+                                                                    break
+                                                                elif data11["status"] == 5:
+                                                                    print("Please re-enter the name as the name contains invalid characters!")
+                                                                else:
+                                                                    print("Please re-enter the name as name already exists!")
+                                                                    continue
+                                                            break
+                                                        elif name4.upper()=="NO":
+                                                            api_url12 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url11)
+                                                            data12 = requests.get(api_url12).json()["url"]
+                                                            if data12["status"] == 7:
+                                                                shortened_url12 = data12["shortLink"]
+                                                                print("Shortened URL: ", shortened_url12)
+                                                                pyperclip.copy(shortened_url12)
+                                                                break
+                                                        else:
+                                                            print("Please enter either Yes/No!")
+                                            elif not link.startswith("https://www"):
+                                                            link2000111 = "https://www." + urllink
+                                                            response2000111 = requests.head(link2000111)
+                                                            status2000111 = response2000111.status_code
+                                                            url_parts2000111 = list(urlparse.urlparse(link2000111))
+                                                            query2000111 = dict(urlparse.parse_qsl(url_parts2000111[4]))
+                                                            query2000111.update(params)
+     
+                                                            url_parts2000111[4] = urlencode(query2000111)
+                                                            url20001111 = urlparse.urlunparse(url_parts2000111)
+                                                            url20000111 = urllib.parse.quote(url20001111)
+                                                            link2001111 = "http://www." + urllink
+                                                            response2001111 = requests.head(link2001111)
+                                                            status2001111 = response2001111.status_code
+                                                            url_parts2001111 = list(urlparse.urlparse(link2001111))
+                                                            query2001111 = dict(urlparse.parse_qsl(url_parts2001111[4]))
+                                                            query2001111.update(params)
+     
+                                                            url_parts2001111[4] = urlencode(query2001111)
+                                                            url2001111 = urlparse.urlunparse(url_parts2001111)
+                                                            url200011111 = urllib.parse.quote(url2001111)
+                                                            if status2000111==200:
+                                                                while True:
+                                                                    name200011111 = input("Would you like to give a name? : ")
+                                                                    if name200011111.upper()=="YES":
+                                                                        while True:
+                                                                            name200001111 = input("Enter name: ")
+                                                                            api_url20001111 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url20000111, name200001111)
+                                                                            data20001111 = requests.get(api_url20001111).json()["url"]
+                                                                            if data20001111["status"] == 7:
+                                                                                shortened_url20001111 = data20001111["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url20001111)
+                                                                                pyperclip.copy(shortened_url20001111)
+                                                                                break
+                                                                            elif data20001111["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name200011111.upper()=="NO":
+                                                                        api_url20011111 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url20000111)
+                                                                        data20011111 = requests.get(api_url20011111).json()["url"]
+                                                                        if data20011111["status"] == 7:
+                                                                            shortened_url20011111 = data20011111["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url20011111)
+                                                                            pyperclip.copy(shortened_url20011111)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            elif status2001111==200:
+                                                                while True:
+                                                                    name2002111 = input("Would you like to give a name? : ")
+                                                                    if name2002111.upper()=="YES":
+                                                                        while True:
+                                                                            name2000111111 = input("Enter name: ")
+                                                                            api_url20021111 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url200011111, name2000111111)
+                                                                            data20021111 = requests.get(api_url20021111).json()["url"]
+                                                                            if data20021111["status"] == 7:
+                                                                                shortened_url20021111 = data20021111["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url20021111)
+                                                                                pyperclip.copy(shortened_url20021111)
+                                                                                break
+                                                                            elif data20021111["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name2002111.upper()=="NO":
+                                                                        api_url20011122 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url200011111)
+                                                                        data20011122 = requests.get(api_url20011122).json()["url"]
+                                                                        if data20011122["status"] == 7:
+                                                                            shortened_url20011122 = data20011122["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url20011122)
+                                                                            pyperclip.copy(shortened_url20011122)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            else:
+                                                                print("The entered URL is already shortened")
                                         else:
                                             print("The entered URL is already shortened")
                                     else:
@@ -532,7 +899,7 @@ class Cuttshort:
                                             print("Please enter either Yes/No!")
                                 elif status1 == 301:
                                     secpro1, urllink1 = link1.split("://")
-                                    link6 = "https://" + urllink1
+                                    link6 = "https://" + urllink1 + "/"
                                     response4 = requests.head(link6)
                                     status4 = response4.status_code
                                     url_parts4 = list(urlparse.urlparse(link6))
@@ -615,6 +982,87 @@ class Cuttshort:
                                                             break
                                                     else:
                                                         print("Please enter either Yes/No!")
+                                            elif status7 == 301 and not link.startswith("http://www"):
+                                                            link2000200 = "http://www." + urllink1 + "/"
+                                                            response2000200 = requests.head(link2000200)
+                                                            status2000200 = response2000200.status_code
+                                                            url_parts2000200 = list(urlparse.urlparse(link2000200))
+                                                            query2000200 = dict(urlparse.parse_qsl(url_parts2000200[4]))
+                                                            query2000200.update(params)
+     
+                                                            url_parts2000200[4] = urlencode(query2000200)
+                                                            url2000200 = urlparse.urlunparse(url_parts2000200)
+                                                            url20000200 = urllib.parse.quote(url2000200)
+                                                            link2001200 = "https://www." + urllink1 + "/"
+                                                            response2001200 = requests.head(link2001200)
+                                                            status2001200 = response2001200.status_code
+                                                            url_parts2001200 = list(urlparse.urlparse(link2001200))
+                                                            query2001200 = dict(urlparse.parse_qsl(url_parts2001200[4]))
+                                                            query2001200.update(params)
+     
+                                                            url_parts2001200[4] = urlencode(query2001200)
+                                                            url2001200 = urlparse.urlunparse(url_parts2001200)
+                                                            url20001200 = urllib.parse.quote(url2001200)
+                                                            if status2000200==200:
+                                                                while True:
+                                                                    name2000200 = input("Would you like to give a name? : ")
+                                                                    if name2000200.upper()=="YES":
+                                                                        while True:
+                                                                            name20000200 = input("Enter name: ")
+                                                                            api_url2000200 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url20000200, name20000200)
+                                                                            data2000200 = requests.get(api_url2000200).json()["url"]
+                                                                            if data2000200["status"] == 7:
+                                                                                shortened_url2000200 = data2000200["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url2000200)
+                                                                                pyperclip.copy(shortened_url2000200)
+                                                                                break
+                                                                            elif data2000200["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name2000200.upper()=="NO":
+                                                                        api_url2001200 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url20000200)
+                                                                        data2001200 = requests.get(api_url2001200).json()["url"]
+                                                                        if data2001200["status"] == 7:
+                                                                            shortened_url2001200 = data2001200["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url2001200)
+                                                                            pyperclip.copy(shortened_url2001200)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            elif status2001200==200:
+                                                                while True:
+                                                                    name2002200 = input("Would you like to give a name? : ")
+                                                                    if name2002200.upper()=="YES":
+                                                                        while True:
+                                                                            name20001200 = input("Enter name: ")
+                                                                            api_url2002200 = 'http://cutt.ly/api/api.php?key={}&short={}&name={}'.format(ak, url20001200, name20001200)
+                                                                            data2002200 = requests.get(api_url2002200).json()["url"]
+                                                                            if data2002200["status"] == 7:
+                                                                                shortened_url2002200 = data2002200["shortLink"]
+                                                                                print("Shortened URL: ", shortened_url2002200)
+                                                                                pyperclip.copy(shortened_url2002200)
+                                                                                break
+                                                                            elif data2002200["status"] == 5:
+                                                                                print("Please re-enter the name as the name contains invalid characters!")
+                                                                            else:
+                                                                                print("Please re-enter the name as name already exists!")
+                                                                                continue
+                                                                        break
+                                                                    elif name2002200.upper()=="NO":
+                                                                        api_url2001200 = 'http://cutt.ly/api/api.php?key={}&short={}'.format(ak, url20001200)
+                                                                        data2001200 = requests.get(api_url2001200).json()["url"]
+                                                                        if data2001200["status"] == 7:
+                                                                            shortened_url2001200 = data2001200["shortLink"]
+                                                                            print("Shortened URL: ", shortened_url2001200)
+                                                                            pyperclip.copy(shortened_url2001200)
+                                                                            break
+                                                                    else:
+                                                                        print("Please enter either Yes/No!")
+                                                            else:
+                                                                print("The entered URL is already shortened")
                                             else:
                                                 print("The entered URL is already shortened")
                                 elif status1==302 and status12==200:
