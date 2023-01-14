@@ -5,7 +5,7 @@ long_description = (this_directory / "README.md").read_text()
 setup(
   name = 'CuttApi',         
   packages = ['CuttApi'],   
-  version = '0.1.4',      
+  version = '0.2.1',      
   license='MIT',        
   #description = 'One of the best ways of shortening URLs using Cuttly URL shortener just by entering your API key and seeing the rest that is done automatically by the Module',   
   long_description=long_description,
