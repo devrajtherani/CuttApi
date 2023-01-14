@@ -5,7 +5,7 @@ long_description = (this_directory / "README.md").read_text()
 setup(
   name = 'CuttApi',         
   packages = ['CuttApi'],   
-  version = '0.2.1.2',      
+  version = '0.2.1.3',      
   license='MIT',        
   description = 'One of the best ways of shortening URLs using Cuttly URL shortener just by entering your API key and seeing the rest that is done automatically by the Module',   
   long_description=long_description,
@@ -13,7 +13,7 @@ setup(
   author = 'Devraj Therani',                   
   author_email = 'ttctlc96e@mozmail.com',      
   url = 'https://github.com/devrajtherani/CuttApi',   
-  download_url = 'https://github.com/devrajtherani/CuttApi/archive/refs/tags/v_0.2.1.2.tar.gz',    
+  download_url = 'https://github.com/devrajtherani/CuttApi/archive/refs/tags/v_0.2.1.3.tar.gz',    
   keywords = ['API', 'SIMPLE'],   
   install_requires=[            
           'requests',
