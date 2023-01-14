@@ -30,6 +30,7 @@ The only thing users need to do is
 ```sh
 from CuttApi import Cuttshort
 import stdiomask
+
 api_key = stdiomask.getpass("Enter your Cuttly api key: ")
 short = Cuttshort(api_key)
 ```
