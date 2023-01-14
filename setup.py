@@ -13,7 +13,7 @@ setup(
   author = 'Devraj Therani',                   
   author_email = 'ttctlc96e@mozmail.com',      
   url = 'https://github.com/devrajtherani/CuttApi',   
-  download_url = 'https://github.com/devrajtherani/CuttApi/archive/refs/tags/v_0.1.4.tar.gz',    
+  download_url = 'https://github.com/devrajtherani/CuttApi/archive/refs/tags/v_0.2.1.tar.gz',    
   keywords = ['API', 'SIMPLE'],   
   install_requires=[            
           'requests',
