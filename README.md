@@ -1,8 +1,7 @@
 # CuttApi
 One of the best URL shortener module for Python of all time!
 
-## Git and Dev
-[![Git and Dev](Github.png)](https://cutt.ly/CuttApi) [![Git and Dev](Dev%20-%20Copy%20(2).png)](https://cutt.ly/CuttApi)
+[![CuttApi](https://bn02pap001files.storage.live.com/y4mddoJNGt0_6ndR3jw_e--PbyBPm-TATAAJMvjqg-KJ4PqTYgD5bFR8HwCBbGMSDaYp_246ZmVMRlZjx7KTv9JbaVnXfFQcivqkFlJK3OpeNwI-Jnq3--W_bt5rLbz2QlusQORHvTIxqjIuilIaKCzka1A2hUJzGT81GqdZntyGAURvmdywES0-olI9115inae?width=52&height=90&cropmode=none)](https://cutt.ly/CuttApi)
 
 
 CuttApi is one of the best ways of shortening URLs using Cuttly URL shortener just by entering your API key and seeing the rest that is done automatically by the Module
