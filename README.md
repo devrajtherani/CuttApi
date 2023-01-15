@@ -2,7 +2,7 @@
 One of the best URL shortener module for Python of all time!
 
 ## Git and Dev
-[![Git and Dev](https://github.com/devrajtherani/CuttApi/blob/main/Github.png)](https://cutt.ly/CuttApi) [![Git and Dev](https://github.com/devrajtherani/CuttApi/blob/main/Dev%20-%20Copy%20(2).png)](https://cutt.ly/CuttApi)
+[![Git and Dev](Github.png)](https://cutt.ly/CuttApi) [![Git and Dev](Dev%20-%20Copy%20(2).png)](https://cutt.ly/CuttApi)
 
 
 CuttApi is one of the best ways of shortening URLs using Cuttly URL shortener just by entering your API key and seeing the rest that is done automatically by the Module
@@ -15,7 +15,7 @@ CuttApi is one of the best ways of shortening URLs using Cuttly URL shortener ju
 
 ## Installation
 
-Installing requirements to establish the Module 👇
+Installing requirements to establish the Module :
 
 ```sh
 requests
@@ -30,7 +30,6 @@ The only thing users need to do is
 ```sh
 from CuttApi import Cuttshort
 import stdiomask
-
 api_key = stdiomask.getpass("Enter your Cuttly api key: ")
 short = Cuttshort(api_key)
 ```
