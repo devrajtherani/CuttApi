@@ -1,8 +1,6 @@
 # CuttApi
 One of the best URL shortener module for Python of all time!
 
-[![CuttApi](https://bn02pap001files.storage.live.com/y4mddoJNGt0_6ndR3jw_e--PbyBPm-TATAAJMvjqg-KJ4PqTYgD5bFR8HwCBbGMSDaYp_246ZmVMRlZjx7KTv9JbaVnXfFQcivqkFlJK3OpeNwI-Jnq3--W_bt5rLbz2QlusQORHvTIxqjIuilIaKCzka1A2hUJzGT81GqdZntyGAURvmdywES0-olI9115inae?width=52&height=90&cropmode=none)](https://cutt.ly/CuttApi)
-
 
 CuttApi is one of the best ways of shortening URLs using Cuttly URL shortener just by entering your API key and seeing the rest that is done automatically by the Module
 
@@ -41,7 +39,7 @@ short = Cuttshort(api_key)
 
 MIT
 
-Copyright (c) 2023  Devraj Therani
+Copyright (c) 2023  [![CuttApi](https://bn02pap001files.storage.live.com/y4ms4yALEE_YG82Q1S3oinTy_aknPTAttw40D8JZcVlqUlr_TcE3fnxq096-9Sgyo6vr2RXBxlM7iwvqEl-KXPE8WsEE0kp4hlKBPhGBuCCJaKce70yND3Bzev9QA56skS8p05lvI_PkCOpFW5oCyIWLIOUcAQ348UK3AnqHR3XI9D8J5l9lYh0z1yBnj751ICx?width=20&height=21&cropmode=none)](https://cutt.ly/CuttApi)evraj Therani
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
