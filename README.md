@@ -72,8 +72,8 @@ CuttApi developer respects your privacy! The data you enter does not go over the
 
 Please keep the following points in my mind :-
 - Don't delete the file to make sure you have the best experience!
-- The file is stored with the name as your API key, so any updates by the user can cause the user not being able to use the latest feature.
-- Multiple API keys can be used on the same device :)
+- The file is stored with the name as your API key, so any manual updates by the user to this file can cause the user not being able to use the latest feature
+- Multiple API keys can be used on the same device
 
 ## Feedback
 Feedbacks are vital for any software! <br/>
