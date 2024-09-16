@@ -35,7 +35,7 @@ short = Cuttshort(api_key)
 - But if you enter a wrong one, you proceed only after entering the correct one.
 - As you proceed, the same thing happens with Links and Alias (if you wanna give), but that's good since the process doesn't start over from the start of entering the API key.
 
-## Hidden Class
+## yurl
 Cuttshort class is supported by one more class which is a URL corrector as well as checker!
 ```sh
 from CuttApi import (hidden_class)
@@ -58,14 +58,6 @@ And that happens whether you put :-
 - https://www.google.com/
 
 Try for twitter.com or for any other link and let CuttApi know on the e-mail id mentioned!
-
-```diff
-Note :-
-
-This can only take place after you identify the class name!
-
-Try asking the net ;)
-```
 
 ## Privacy
 CuttApi developer respects your privacy! The data you enter does not go over the net except to CuttLy for creations and updates. The data you enter is safely stored on your device, so that you can work on links and find them easily!
